@@ -122,11 +122,13 @@
 				}
 			}
 			
-			startNumber = n;
+			startNumber = n.toString();
+                        return startNumber;
 		},
 		
 		addOne = function() {
-			flipToNum(startNumber + 1, true);
+			flipToNum(parseInt(startNumber, 10) + 1, true);
+                        return startNumber;
 		},
 		
 		setStartNumber = function() {
@@ -151,6 +153,7 @@
 			if (options.endNumber) endNumber = options.endNumber;
 			if (options.duration) duration = options.duration;
 			if (options.imagePath) img = options.imagePath;
+
 			
 			setStartNumber();
 			createBase();
